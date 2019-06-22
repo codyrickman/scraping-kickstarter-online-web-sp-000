@@ -1,5 +1,5 @@
 # require libraries/modules here
-require nokogirl
+require Nokogirl
 
 def create_project_hash
   html = File.read('fixtures/kickstarter.html')
