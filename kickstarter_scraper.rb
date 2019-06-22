@@ -7,9 +7,9 @@ def create_project_hash
   project_hash = {}
   projects = {}
   kickstarter.css("li.project.grid_4").each do |project|
-     projects[project.css("h2.bbcard_name strong a").text] = {}
+     projects[project.css("h2.bbcard_name strong a").text] = {:image_link => project.css("img.projectphoto-little").attribute("src").value}
   end
-  puts projects
+  project_hash[:projects] = projects
   puts project_hash
 end
 
